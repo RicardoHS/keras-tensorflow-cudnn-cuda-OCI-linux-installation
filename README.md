@@ -6,6 +6,8 @@ Things to add:
 * Ubuntu 16.04 and 14.04 modules
 * Unistall script (if something goes wrong)
 
+## links
+
 https://www.tensorflow.org/install/
 
 https://keras.io/#installation
@@ -69,7 +71,7 @@ sudo pip install keras
 
 ```
 
-# Unistall Cuda
+## Unistall Cuda
 ```
 for i in $(cat kk); do sudo dpkg -P $i ;done 
 for i in $(cat kk); do sudo dpkg -P $i ;done
