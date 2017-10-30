@@ -7,11 +7,17 @@ Things to add:
 * Unistall script (if something goes wrong)
 
 https://www.tensorflow.org/install/
+
 https://keras.io/#installation
+
 CUDA instructions http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A
+
 cudNN instructions http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
+
 graphic cards compute capability https://developer.nvidia.com/cuda-gpus
+
 CUDA download links https://developer.nvidia.com/cuda-toolkit-archive
+
 cudNN download links (you need to create a developer account) https://developer.nvidia.com/cudnn
 
 
