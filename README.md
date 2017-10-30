@@ -1,6 +1,20 @@
 # WIP - Work In Progress
 Currently, Tensorflow doesnt support CUDA9, so CUDA8 and cudNN6 is needed.
 
+Things to add:
+* Modular script for diferent distros
+* Ubuntu 16.04 and 14.04 modules
+* Unistall script (if something goes wrong)
+
+https://www.tensorflow.org/install/
+https://keras.io/#installation
+CUDA instructions http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A
+cudNN instructions http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
+graphic cards compute capability https://developer.nvidia.com/cuda-gpus
+CUDA download links https://developer.nvidia.com/cuda-toolkit-archive
+cudNN download links (you need to create a developer account) https://developer.nvidia.com/cudnn
+
+
 # keras-tensorflow-cudnn-cuda-OCI-linux-installation
 One-Click-Installation script and configuration for any suported linux distribution.
 
