@@ -1,14 +1,22 @@
-import numpy
+from __future__ import print_function
+import subprocess
 
 def main():
     bashCommand = '''
 echo "Hello"
 '''
 
-    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-
-    return output, error
+    #Execute the program
+	for proc in bashCommand.split('\n'):
+		#If proc is not empty
+		if proc:
+			print(proc.split())
+			try:
+				process = subprocess.Popen(proc, stdout=subprocess.PIPE, shell=True)
+				output, error = process.communicate()
+			except OSError as e:
+				print(e)
+				break
 
 def getDescription():
 	description = "The template of the variables"
