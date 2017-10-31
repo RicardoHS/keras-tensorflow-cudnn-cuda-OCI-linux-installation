@@ -52,7 +52,7 @@ def main():
         except:
             print("No valid index")
 
-    print "Installing for %s"%(installationModules[inpt-1])
+    print "Starting installation for %s\n"%(installationModules[inpt-1])
     InstallationProcess(installationModules[inpt-1]).install()
 
 

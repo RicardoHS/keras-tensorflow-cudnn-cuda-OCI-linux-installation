@@ -12,27 +12,15 @@ apt-get -y install cuda
 
 rm cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
 
-export CUDA_HOME=/usr/local/cuda-8.0/
-export LD_LIBRARY_PATH=${CUDA_HOME}lib64
-PATH=${CUDA_HOME}/bin:${PATH}
-export PATH
+echo "Now go to https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v6/prod/8.0_20170307/cudnn-8.0-linux-x64-v6.0-tgz and download the file and save it in $(pwd)"
 
-#the following line doesnt work, download manually
-echo "Now go to https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v6/prod/8.0_20170307/cudnn-8.0-linux-x64-v6.0-tgz and download the file. Save in"
-path=$(pwd)
-pwd
-echo "and press enter."
-read
-while [ ! -f $path"/cudnn-8.0-linux-x64-v6.0.tgz" ]
-do
-  echo "the file $path\"cudnn-8.0-linux-x64-v6.0.tgz\" does not exists"
-  read
-done
+while [ ! -f $(pwd)"/cudnn-8.0-linux-x64-v6.0.tgz" ];do sleep 1; done
+echo "Installing cudNN"
 
 tar -zxvf cudnn-8.0-linux-x64-v6.0.tgz
 
-cp cuda/include/* $CUDA_HOME"/include/"
-cp cuda/lib64/* $CUDA_HOME"/lib64/"
+cp cuda/include/* "/usr/local/cuda-8.0/include/"
+cp cuda/lib64/* "/usr/local/cuda-8.0/lib64/"
 
 apt-get install libcupti-dev
 
@@ -52,9 +40,19 @@ pip install keras
 			try:
 				process = subprocess.Popen(proc, stdout=subprocess.PIPE, shell=True)
 				output, error = process.communicate()
+				print(output,end='')
+				if error:
+					sys.exit()
 			except OSError as e:
 				print(e)
 				break
+
+	end_message='''\n\nInstallation have finished, dont forget to run:
+			export CUDA_HOME=/usr/local/cuda-8.0/
+			export LD_LIBRARY_PATH=${CUDA_HOME}lib64
+			export ${CUDA_HOME}/bin:${PATH}'''
+
+	print(end_message)
 
 def getDescription():
 	description = "CUDA 8.0 - cudNN 6.0 - TensorFlow (master) - Keras (master)"
