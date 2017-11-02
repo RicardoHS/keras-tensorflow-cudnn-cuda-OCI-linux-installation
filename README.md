@@ -20,6 +20,10 @@ This will install and configure:
 * TensorFlow
 * Keras
 
+Suported distros:
+* Ubuntu 16.04
+* Ubuntu 14.04
+
 # Contribute
 You can contribute to the project adding modules to the Linux distro version you want, just copy-paste the template with the name you want, add bash commands to the `bashCommand` variable and [Pull Request](https://help.github.com/articles/about-pull-requests/).
 
