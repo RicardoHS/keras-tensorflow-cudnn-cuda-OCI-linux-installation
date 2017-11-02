@@ -49,7 +49,7 @@ def main():
                 raise IndexError
             foo=installationModules[inpt-1]
             break
-        except:
+        except (IndexError, NameError):
             print("No valid index")
 
     print "Starting installation for %s\n"%(installationModules[inpt-1])

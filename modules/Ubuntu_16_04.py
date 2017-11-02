@@ -46,10 +46,10 @@ pip install keras
 			except OSError as e:
 				print(e)
 				break
-            except KeyboardInterrupt:
-                response = raw_input('Are you sure you want to exit the installation? (y/N): ')
-                if response.upper() == 'Y' or response.upper() == 'YES':
-                    raise
+			except KeyboardInterrupt:
+				response = raw_input('Are you sure you want to exit the installation? (y/N): ')
+				if response.upper() == 'Y' or response.upper() == 'YES':
+					raise
 
 	end_message='''\n\nInstallation have finished, dont forget to run:
 			export CUDA_HOME=/usr/local/cuda-8.0/
