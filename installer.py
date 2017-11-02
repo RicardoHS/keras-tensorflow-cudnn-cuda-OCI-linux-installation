@@ -21,7 +21,7 @@ def getHelpMessage():
 * CUDA
 * cudNN
 * TensorFlow
-* Keras
+* Keras (already in the TensorFlow module)
 
 The following systems are suported:
 

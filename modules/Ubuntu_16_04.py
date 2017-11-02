@@ -29,8 +29,6 @@ yes | pip install --upgrade pip
 
 yes | pip install tensorflow-gpu
 yes | pip install h5py
-
-yes | pip install keras
 '''
 	#Execute the program
 	for proc in bashCommand.split('\n'):
@@ -59,5 +57,5 @@ yes | pip install keras
 	print(end_message)
 
 def getDescription():
-	description = "CUDA 8.0 - cudNN 6.0 - TensorFlow (master) - Keras (master)"
+	description = "CUDA 8.0 - cudNN 6.0 - TensorFlow (master) - Keras (tensorflow.keras)"
 	return description
