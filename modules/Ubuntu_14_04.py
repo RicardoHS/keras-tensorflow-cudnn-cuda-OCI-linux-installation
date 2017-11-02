@@ -22,15 +22,15 @@ tar -zxvf cudnn-8.0-linux-x64-v6.0.tgz
 cp cuda/include/* "/usr/local/cuda-8.0/include/"
 cp cuda/lib64/* "/usr/local/cuda-8.0/lib64/"
 
-apt-get install libcupti-dev
+apt-get install -y libcupti-dev
 
 apt-get install -y python-pip python-dev
-pip install --upgrade pip
+yes | pip install --upgrade pip
 
-pip install tensorflow-gpu
-pip install h5py
+yes | pip install tensorflow-gpu
+yes | pip install h5py
 
-pip install keras
+yes | pip install keras
 '''
 	#Execute the program
 	for proc in bashCommand.split('\n'):
