@@ -17,6 +17,10 @@ echo "Hello"
             except OSError as e:
                 print(e)
                 break
+            except KeyboardInterrupt:
+                response = raw_input('Are you sure you want to exit the installation? (y/N): ')
+                if response.upper() == 'Y' or response.upper() == 'YES':
+                    raise
 
 def getDescription():
 	description = "The template of the variables"
