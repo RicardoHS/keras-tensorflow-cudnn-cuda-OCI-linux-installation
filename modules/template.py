@@ -18,7 +18,7 @@ echo "Hello"
                 print(e)
                 break
             except KeyboardInterrupt:
-                response = raw_input('Are you sure you want to exit the installation? (y/N): ')
+                response = raw_input('The current bash command has been aborted, Do you want to exit the installation? (y/N): ')
                 if response.upper() == 'Y' or response.upper() == 'YES':
                     raise
 
