@@ -19,6 +19,11 @@ This will install and configure:
 * TensorFlow
 * Keras
 
+# Contribute
+You can contribute to the project adding modules to the Linux distro version you want, just copy-paste the template with the name you want, add bash commands to the `bashCommand` variable and [Pull Request](https://help.github.com/articles/about-pull-requests/).
+
+Comments, Issues and Forks are welcome.
+
 ## links
 
 tensorflow instructions https://www.tensorflow.org/install/
