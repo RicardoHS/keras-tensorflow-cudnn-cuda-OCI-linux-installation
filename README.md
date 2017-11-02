@@ -24,6 +24,8 @@ Suported distros:
 * Ubuntu 16.04
 * Ubuntu 14.04
 
+If you want a specific distro installation, open a [new issue](https://github.com/RicardoHS/keras-tensorflow-cudnn-cuda-OCI-linux-installation/issues/new) and I will try to implement it.
+
 # Contribute
 You can contribute to the project adding modules to the Linux distro version you want, just copy-paste the template with the name you want, add bash commands to the `bashCommand` variable and [Pull Request](https://help.github.com/articles/about-pull-requests/).
 
