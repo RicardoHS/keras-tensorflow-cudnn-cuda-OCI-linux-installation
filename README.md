@@ -7,7 +7,8 @@ TODO list (you can contribute):
 * ~~Modular script for diferent distros support~~
 * Hardware detection
 * Info about witch hardware suports witch CUDA and cudNN versions
-* ~~Ubuntu 16.04~~ and 14.04 modules
+* Concurrent info on the bash commands
+* ~~Ubuntu 16.04 and 14.04 modules~~
 * Unistall script (if something goes wrong)
 
 # keras-tensorflow-cudnn-cuda-OCI-linux-installation
