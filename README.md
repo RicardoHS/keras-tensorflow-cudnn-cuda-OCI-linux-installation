@@ -18,8 +18,9 @@ This will install and configure:
 * nvidia-CUDA
 * nvidia-cudNN
 * TensorFlow
-* Keras
 
+Keras is already in the TensorFlow module. You can use it with `tf.keras`
+ 
 Suported distros:
 * Ubuntu 16.04
 * Ubuntu 14.04
@@ -35,8 +36,6 @@ Comments, Issues and Forks are welcome.
 
 tensorflow instructions https://www.tensorflow.org/install/
 
-keras instructions https://keras.io/#installation
-
 CUDA instructions http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A
 
 cudNN instructions http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
@@ -46,6 +45,8 @@ graphic cards compute capability https://developer.nvidia.com/cuda-gpus
 CUDA download links https://developer.nvidia.com/cuda-toolkit-archive
 
 cudNN download links (you need to create a developer account) https://developer.nvidia.com/cudnn
+
+keras instructions https://keras.io/#installation
 
 ## Unistall Cuda
 kk contains all the autocomplete string (double tab) of ```sudo apt-get purge cuda```
