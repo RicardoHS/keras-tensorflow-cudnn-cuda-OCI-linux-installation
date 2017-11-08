@@ -68,7 +68,7 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
 
 ### Instructions if you have installed via package mannager
 
-kk contains all the autocomplete string (double tab) of ```sudo apt-get purge cuda```
+kk contains all the autocomplete string (double tab) of ```sudo dpkg -P cuda```
 ```
 for i in $(cat kk); do sudo dpkg -P $i ;done 
 for i in $(cat kk); do sudo dpkg -P $i ;done
