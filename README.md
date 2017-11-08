@@ -78,3 +78,39 @@ for i in $(cat kk); do sudo dpkg -P $i ;done
 for i in $(cat kk); do sudo dpkg -P $i ;done 
 for i in $(cat kk); do sudo dpkg -P $i ;done 
 ```
+
+## Installation Problems
+
+### On importing Tensorflow
+If you see this message on `import tensorflow`
+``` 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import *
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 52, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+ImportError: libcudnn.so.5: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+```
+Means that you Tensorflow version uses a different version of cudNN, check the line:
+
+> ImportError: **libcudnn.so.5**: cannot open shared object file: No such file or directory
+
+And install the cudNN version that the number said (in this case, cudNN version 5 for CUDA 8)
