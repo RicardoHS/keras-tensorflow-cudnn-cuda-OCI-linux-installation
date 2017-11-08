@@ -9,7 +9,7 @@ TODO list (you can contribute):
 * Info about witch hardware suports witch CUDA and cudNN versions
 * Concurrent info on the bash commands
 * ~~Ubuntu 16.04 and 14.04 modules~~
-* Unistall script (if something goes wrong)
+* ~~Unistall script (if something goes wrong)~~ (see below)
 
 # keras-tensorflow-cudnn-cuda-OCI-linux-installation
 One-Click-Installation script and configuration for any suported linux distribution.
