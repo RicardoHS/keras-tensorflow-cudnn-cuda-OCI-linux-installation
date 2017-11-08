@@ -49,6 +49,25 @@ cudNN download links (you need to create a developer account) https://developer.
 keras instructions https://keras.io/#installation
 
 ## Unistall Cuda
+### Instructions from nvida web
+```
+
+To uninstall the CUDA Toolkit, run the uninstallation script provided in the bin directory of the toolkit. By default, it is located in /usr/local/cuda-9.0/bin:
+
+$ sudo /usr/local/cuda-9.0/bin/uninstall_cuda_9.0.pl
+
+To uninstall the NVIDIA Driver, run nvidia-uninstall:
+
+$ sudo /usr/bin/nvidia-uninstall
+
+To enable the Nouveau drivers, remove the blacklist file created in the Disabling Nouveau section, and regenerate the kernel initramfs/initrd again as described in that section.
+
+Read more at: http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ixzz4xquMpi4V
+Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
+```
+
+### Instructions if you have installed via package mannager
+
 kk contains all the autocomplete string (double tab) of ```sudo apt-get purge cuda```
 ```
 for i in $(cat kk); do sudo dpkg -P $i ;done 
