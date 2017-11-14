@@ -10,6 +10,7 @@ TODO list (you can contribute):
 * Concurrent info on the bash commands
 * ~~Ubuntu 16.04 and 14.04 modules~~
 * ~~Unistall script (if something goes wrong)~~ (see below)
+* fix the damn tab vs space war in the code
 
 # keras-tensorflow-cudnn-cuda-OCI-linux-installation
 One-Click-Installation script and configuration for any suported linux distribution.
