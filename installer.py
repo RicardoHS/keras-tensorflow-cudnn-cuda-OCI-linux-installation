@@ -3,6 +3,8 @@
 import sys, getopt, inspect
 import modules
 import os
+import subprocess
+
 from modules import *
 
 class InstallationProcess():
@@ -23,10 +25,12 @@ def getHelpMessage():
 * TensorFlow
 * Keras (already in the TensorFlow module)
 
+"""
+    body = checkHardware() + """
+
 The following systems are suported:
 
 """
-    body = ""
 
     for (name, data) in inspect.getmembers(modules,inspect.ismodule):
         if name != 'glob' and name != 'template':
@@ -36,6 +40,21 @@ The following systems are suported:
 
     return head + body, variables
 
+def checkHardware():
+	vga_nvidia_command="lspci | grep -i '.*vga.*nvidia'"
+	vga_command="lspci | grep -i vga"
+
+	p1 = subprocess.Popen(vga_nvidia_command,shell=True,stdout=subprocess.PIPE)
+	out = p1.communicate()
+
+	if out[0]:
+		message = "Nvidia Graphic Card:\n%s"%(out[0])
+	else:
+		p1 = subprocess.Popen(vga_command,shell=True,stdout=subprocess.PIPE)
+		out = p1.communicate()[0]
+		message = "Graphic Card\nWarning, No Nvidia-GPU detected\n%s"%(out)
+
+	return message
 
 def main():
     helpMessage, installationModules = getHelpMessage()
