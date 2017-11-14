@@ -5,7 +5,7 @@ More info: https://github.com/tensorflow/tensorflow/issues/12052
 
 TODO list (you can contribute):
 * ~~Modular script for diferent distros support~~
-* Hardware detection
+* ~~Hardware detection~~
 * Info about witch hardware suports witch CUDA and cudNN versions
 * Concurrent info on the bash commands
 * ~~Ubuntu 16.04 and 14.04 modules~~
