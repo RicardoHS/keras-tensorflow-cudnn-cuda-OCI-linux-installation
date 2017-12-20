@@ -51,9 +51,9 @@ yes | pip install h5py
 
 	end_message='''\n\nInstallation have finished, dont forget to run:
 			export CUDA_HOME=/usr/local/cuda-8.0/
-			export LD_LIBRARY_PATH=${CUDA_HOME}lib64
-			export ${CUDA_HOME}/bin:${PATH}'''
-
+			export LD_LIBRARY_PATH=$CUDA_HOME/lib64
+			export PATH=$CUDA_HOME/bin:$PATH
+			'''
 	print(end_message)
 
 def getDescription():
